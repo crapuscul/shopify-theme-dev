@@ -77,8 +77,20 @@
   <div class="page-width">
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       <div class="grid__item product__media-wrapper">
+        {% comment %}
+          The product media wrapper contains the media gallery for the product variant images.
+          In this section:
+          - The `custom-product-media-gallery` snippet is rendered, which includes the left and right arrows
+            for navigating through the gallery images.
+          - The arrows are positioned inside the image area and allow users to cycle through the images using
+            the next/previous buttons.
+          - The snippet includes the Flexbox layout that positions the arrows inside the image with appropriate
+            responsiveness for different screen sizes.
+          - This layout is part of the custom product media gallery, designed for enhanced user interaction.
+        {% endcomment %}
         {% render 'custom-product-media-gallery', variant_images: variant_images %}
       </div>
+
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
         <section
           id="ProductInfo-{{ section.id }}"
