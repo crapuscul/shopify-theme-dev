@@ -1,0 +1,34 @@
+.header-wrapper {
+  display: block;
+  position: relative;
+  background-color: transparent !important;
+}
+  #Banner-template--18414648459509__image_banner{
+    top: -110px;
+  }
+.color-{{ section.settings.color_scheme }} {
+  /* Reset the properties applied by this class */
+  background-color: transparent !important;
+  color: inherit !important;
+}
+
+.gradient {
+  /* Reset any gradient styles */
+  background-image: none !important;
+}
+.header__search {
+  display: none !important;
+}
+
+#HeaderMenu-home span {
+  text-underline-offset:0.9rem !important;
+}
+
+#HeaderMenu-catalog span {
+  text-underline-offset:2.9rem !important;
+}
+
+#HeaderMenu-contact span {
+  text-underline-offset: 3.9rem !important;
+}
+ 

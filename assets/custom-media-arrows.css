@@ -1,0 +1,64 @@
+/* Flexbox wrapper for the gallery and arrows */
+.media-gallery-wrapper {
+    display: flex;
+    justify-content: center; /* Center the image in the container */
+    align-items: center; /* Vertically center the image */
+    position: relative; /* Make sure arrows are positioned relative to the wrapper */
+    max-width: 100%; /* Keep the gallery within the bounds of its parent */
+    overflow: hidden; /* Prevent content from overflowing */
+  }
+  
+  /* Styles for the arrows */
+  .arrow-left, .arrow-right {
+    position: absolute; /* Position arrows relative to the image */
+    top: 50%; /* Place the arrows at the center of the image vertically */
+    transform: translateY(-50%); /* Vertically center the arrows */
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 10; /* Ensure arrows are above the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  
+  /* Fixed positions for the arrows inside the image */
+  .arrow-left {
+    left: 20%; /* Position the left arrow 5% from the left edge of the image */
+  }
+  
+  .arrow-right {
+    right: 20%; /* Position the right arrow 5% from the right edge of the image */
+  }
+  
+  /* Image styling */
+  .media-gallery img {
+    max-width: 100%; /* Ensure the image takes up the available space */
+    height: auto;
+    display: block;
+  }
+  @media screen and (max-width:990px) {
+    .arrow-left {
+        left: 5%; /* Position the left arrow 5% from the left edge of the image */
+      }
+      
+      .arrow-right {
+        right: 5%; /* Position the right arrow 5% from the right edge of the image */
+      }
+    
+  }
+  
+  /* Hide arrows on mobile devices */
+  @media screen and (max-width: 750px) {
+    .arrow-left, .arrow-right {
+      display: none; /* Hide arrows on mobile devices */
+    }
+
+  }
+  
